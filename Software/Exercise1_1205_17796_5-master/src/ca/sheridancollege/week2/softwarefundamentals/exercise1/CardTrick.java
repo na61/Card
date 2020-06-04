@@ -38,7 +38,7 @@ public class CardTrick {
         System.out.println("Enter any number between 1 to 13");
         int num = in.nextInt();
         System.out.println("Enter the suit");
-        String suit = input.nextLine();
+        String suit = in.nextLine();
         
         Card lucky = new Card();
         
@@ -46,7 +46,7 @@ public class CardTrick {
         
         for(int n = 0; n < magicHand.length; n++)
         {
-            if((magicHand[n].getValue() == numb)&&(magicHand[n].getSuit().equalsIgnoreCase(suit)))
+            if((magicHand[n].getValue() == num)&&(magicHand[n].getSuit().equalsIgnoreCase(suit)))
             {
                 theWinner = true;
             }
