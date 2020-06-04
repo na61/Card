@@ -22,11 +22,36 @@ public class CardTrick {
             Card c = new Card();
             //c.setValue(insert call to random number generator here)
             //c.setSuit(Card.SUITS[insert call to random number between 0-3 here])
+            
+            int value = (int) (Math.random() * 13 + 1);
+            c.setValue(value);
+            c.setSuit(Card.SUITS[(int) (Math.random() * 4)]);
+            magicHand[i] = c;
         }
         
-        //insert code to ask the user for Card value and suit, create their card
-        // and search magicHand here
-        //Then report the result here
+        Scanner in = new Scanner(System.in);
+        System.out.println("Enter any number between 1 to 13");
+        int num = in.nextInt();
+        System.out.println("Enter the suit");
+        String suit = input.nextLine();
+        
+        Card lucky = new Card();
+        
+        boolean theWinner = false;
+        
+        for(int n = 0; n < magicHand.length; n++)
+        {
+            if((magicHand[n].grtValue() == cardNumber)&&(magicHand[n].getSuit().equalsIgnoreCase(suit)))
+            {
+                theWinner = true;
+            }
+            if(theWinner == true){
+                System.out.println("LUCKY DRAW!!!");
+            }
+            else{
+                System.out.println("BETTER LUCK NEXT TIME");
+            }
+        }
     }
-    
 }
+    
