@@ -11,6 +11,11 @@ package ca.sheridancollege.week2.softwarefundamentals.exercise1;
  * for the match to the user's card. To be used as starting code in ICE 1
  * @author dancye
  */
+/**
+*@ modifier: navdeepKaur
+ id: 991588827
+ */
+import java.util.Scanner;
 public class CardTrick {
     
     public static void main(String[] args)
@@ -41,7 +46,7 @@ public class CardTrick {
         
         for(int n = 0; n < magicHand.length; n++)
         {
-            if((magicHand[n].grtValue() == cardNumber)&&(magicHand[n].getSuit().equalsIgnoreCase(suit)))
+            if((magicHand[n].getValue() == numb)&&(magicHand[n].getSuit().equalsIgnoreCase(suit)))
             {
                 theWinner = true;
             }
